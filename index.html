@@ -8,12 +8,29 @@
   <!-- Reset CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
 
-  <link rel="stylesheet" href="CSS/main.css">
-
   <!-- 구글 폰트 링크 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="CSS/main.css">
+
+
+  <!-- JS -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- My JS -->
+  <script src="Javascript/main.js" defer></script>
+
+
+
+
 
 </head>
 <body>
@@ -40,11 +57,31 @@
           윤 재훈 입니다.
         </p>
       </div>
+
       <div class="presentwork">
-        <img src="Resources/img/work_1.jpg" alt="작업1">
-        <img src="Resources/img/work_2.jpg" alt="작업1">
-        <img src="Resources/img/work_3.jpg" alt="작업1">
-        <img src="Resources/img/work_4.jpg" alt="작업1">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="Resources/img/work_1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_4.jpg" alt="">
+            </div>
+          </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
       </div>
     </div>
   </section>
