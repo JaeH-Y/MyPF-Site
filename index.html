@@ -11,10 +11,13 @@
   <!-- 구글 폰트 링크 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+  <!-- BS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
   <!-- My CSS -->
   <link rel="stylesheet" href="CSS/main.css">
@@ -25,6 +28,8 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
+  <!-- BS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
   <!-- My JS -->
   <script src="Javascript/main.js" defer></script>
 
@@ -50,11 +55,13 @@
   </header>
 
   <section class="viewsection">
-    <div class="inner">
+    <div class="inner shadow content border">
       <div class="presentme">
+        <p class="boldtext font24">
+          FullStack Developer 윤재훈 입니다. <br>
+        </p>
         <p>
-          FullStack Developer
-          윤 재훈 입니다.
+          WPF(MVVM), Web(HTML/CSS/JS) 기반의 인터랙션과 성능 최적화에 관심이 많습니다. 여행 도우미, 금융 계산기 등 실사용 프로젝트를 제작했습니다.
         </p>
       </div>
 
@@ -82,6 +89,116 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="title">ABOUT</h2>
+    <div class="inner shadow content border">
+      <div class="about-me-img">
+        <img src="/Resources/img/1.png" alt="">
+      </div>
+
+      <div class="about-me-text">
+        <strong class="font24 boldtext">인생이 개발이다.</strong>
+        <h3>Yun Jae Hoon (1997.09.29)</h3>
+        <div class="education">
+          <h4>EDUCATION</h4>
+          <ul>
+            <li>학과 학사 졸업</li>
+            <li>클라우드 활용 부트캠프 수료</li>
+          </ul>
+        </div>
+        <div class="carrer">
+          <h4>CARRER</h4>
+          <ul>
+            <li>회사</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2 class="title">SKILLS</h2>
+    <div class="inner">
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/HTML5.png" alt="">
+        <span>HTML</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/CSS3.png" alt="">
+        <span>CSS</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/JavaScript.png" alt="">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/Visual-Studio-Code-(VS-Code).png" alt="">
+        <span>VS Code</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/Git.png" alt="">
+        <span>Git</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/GitHub.png" alt="">
+        <span>GitHub</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/(CSharp).png" alt="">
+        <span>C#</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/Visual-Studio.png" alt="">
+        <span>Visual Studio</span>
+      </div>
+      <div class="skill content shadow border">
+        <img src="/Resources/icon/skills/NET-core.png" alt="">
+        <span>ASP.NET</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="title">PROJECTS</h2>
+    <div class="inner shadow border">
+      <div class="project-img">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="Resources/img/work_1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/work_4.jpg" alt="">
+            </div>
+          </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="project-present">
+        <h3>프로젝트 제목</h4>
+        <h4>프로젝트 주제(소제목)</h4>
+        <ul>
+          <li>기능 1</li>
+          <li>기능 2</li>
+          <li>기능 3</li>
+          <li>기능 4</li>
+        </ul>
       </div>
     </div>
   </section>

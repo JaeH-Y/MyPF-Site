@@ -1,21 +1,34 @@
 /* Common Style */
 
 *{
-  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif;
+  font-family: "Nanum Gothic", "Noto Sans KR", "Noto Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color : #333;
+  color : #0E2233;
   box-sizing: border-box;
 }
 
-body{
-  background-color: #f7f8fb;
+html {
+  overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #D6E6F2;
+}
+
+section {
+  width: 100%;
+  padding: 150px 20px 0;
+}
 .inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 img {
@@ -26,6 +39,34 @@ a{
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+}
+
+.shadow {
+  box-shadow: 2px 2px 10px #3337;
+}
+
+.content {
+  background-color: #EAF2FB;
+}
+
+.border {
+  border: 2px solid #F7FBFCBA;
+  border-radius: 20px;
+}
+
+/* Text관련 */
+.boldtext{
+  font-weight: bold;
+}
+.font24{
+  font-size: 24px;
+}
+.title {
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
 }
 
 /* header */
@@ -43,7 +84,7 @@ a{
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: #ebedf3;
+  background-color: #D6E6F2;
 }
 
 header .inner {
@@ -52,6 +93,7 @@ header .inner {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  border: 0px;
 }
 
 .inner .headerimg img{
@@ -67,38 +109,38 @@ header .inner .nav {
 /* View Section */
 
 .viewsection {
-  width: 100%;
   position: relative;
+  padding: 50px 20px 0;
   top: 60px;
   height: calc(70vh - 60px);
-  padding: 50px 20px;
 }
 
 .viewsection .inner {
   width: 100%;
   height: 100%;
-  border: 3px solid #556070;
-  border-radius: 20px;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .viewsection .inner .presentme {
-  text-align: center;
-  vertical-align: middle;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.viewsection .inner .presentme p {
+  padding: 0 10px;
 }
 
 .viewsection .inner .presentwork {
   width: 70%;
   height: 100%;
-  position: relative;
   display: flex;
 }
 
 .viewsection .inner .presentwork .swiper {
-  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -108,6 +150,70 @@ header .inner .nav {
   height: 100%;
   padding: 10px;
   object-fit: contain;
+}
+
+/* About */
+.about .inner{
+  display: flex;
+}
+
+.about .inner .about-me-img,
+.about .inner .about-me-text{
+  width: 50%;
+  padding: 20px;
+}
+
+/* Skills */
+
+.skills .inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills .inner .skill {
+  padding: 5px 0;
+  width: 10%;
+  text-align: center;
+  margin: 0 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.skills .inner .skill img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skills .inner .skill span {
+  display: block;
+}
+
+/* Projects */
+
+.projects .inner {
+  display: flex;
+}
+
+.projects .inner .project-img,
+.projects .inner .project-present{
+  width: 50%;
+}
+
+.projects .inner .project-img .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.projects .inner .project-img .swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.projects .inner .project-present {
+  margin: 0 auto;
 }
 
 /* Footer */
