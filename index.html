@@ -13,11 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+  <!-- 구글 머티리얼 아이콘 연결 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-
-  <!-- BS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
   <!-- My CSS -->
   <link rel="stylesheet" href="CSS/main.css">
@@ -25,11 +25,12 @@
 
   <!-- JS -->
 
+  <!-- ScrollMagic 연결 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-  <!-- BS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
   <!-- My JS -->
   <script src="Javascript/main.js" defer></script>
 
@@ -51,17 +52,23 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="hambuger">
+        <a href="Javascript:void(0)" class="hambugerbtn">
+          <span class="material-symbols-outlined">menu</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <section class="viewsection">
-    <div class="inner shadow content border">
+    <div class="inner shadow content allborder">
       <div class="presentme">
         <p class="boldtext font24">
           FullStack Developer 윤재훈 입니다. <br>
         </p>
         <p>
-          WPF(MVVM), Web(HTML/CSS/JS) 기반의 인터랙션과 성능 최적화에 관심이 많습니다. 여행 도우미, 금융 계산기 등 실사용 프로젝트를 제작했습니다.
+          WPF(MVVM), Web(HTML/CSS/JS) 기반의 인터랙션과 성능 최적화에 관심이 많습니다.
+          <br>여행 도우미, 금융 계산기 등 실사용 프로젝트를 제작했습니다.
         </p>
       </div>
 
@@ -95,7 +102,7 @@
 
   <section id="about" class="about">
     <h2 class="title">ABOUT</h2>
-    <div class="inner shadow content border">
+    <div class="inner shadow content allborder">
       <div class="about-me-img">
         <img src="/Resources/img/1.png" alt="">
       </div>
@@ -120,42 +127,42 @@
     </div>
   </section>
 
-  <section id="skills" class="skills">
+  <section id="skills" class="skills scroll-spy">
     <h2 class="title">SKILLS</h2>
     <div class="inner">
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/HTML5.png" alt="">
         <span>HTML</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/CSS3.png" alt="">
         <span>CSS</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/JavaScript.png" alt="">
         <span>JavaScript</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/Visual-Studio-Code-(VS-Code).png" alt="">
         <span>VS Code</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/Git.png" alt="">
         <span>Git</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/GitHub.png" alt="">
         <span>GitHub</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/(CSharp).png" alt="">
         <span>C#</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/Visual-Studio.png" alt="">
         <span>Visual Studio</span>
       </div>
-      <div class="skill content shadow border">
+      <div class="skill content shadow allborder">
         <img src="/Resources/icon/skills/NET-core.png" alt="">
         <span>ASP.NET</span>
       </div>
@@ -164,9 +171,9 @@
 
   <section id="projects" class="projects">
     <h2 class="title">PROJECTS</h2>
-    <div class="inner shadow border">
+    <div class="inner shadow allborder content firstp">
       <div class="project-img">
-        <div class="swiper">
+        <div class="swiper allborder">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -183,15 +190,18 @@
               <img src="Resources/img/work_4.jpg" alt="">
             </div>
           </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <a href="Javascript:void(0)" class="projectmodalbtn">
+            <span class="material-symbols-outlined lighttext firstp">open_in_full</span>
+          </a>
         </div>
       </div>
       <div class="project-present">
-        <h3>프로젝트 제목</h4>
+        <h3>프로젝트 제목</h3>
         <h4>프로젝트 주제(소제목)</h4>
         <ul>
           <li>기능 1</li>
@@ -199,12 +209,157 @@
           <li>기능 3</li>
           <li>기능 4</li>
         </ul>
+        <div class="project-skill">
+          <img src="/Resources/icon/skills/Visual-Studio-Code-(VS-Code).png" alt="">
+          <img src="/Resources/icon/skills/HTML5.png" alt="">
+          <img src="/Resources/icon/skills/CSS3.png" alt="">
+          <img src="/Resources/icon/skills/JavaScript.png" alt="">
+          <img src="/Resources/icon/skills/GitHub.png" alt="">
+        </div>
+        <div class="project-link">
+          <a href="Javascript:void(0)">
+            <img src="Resources/icon/skills/GitHub.png" alt="">
+          </a>
+          <a href="Javascript:void(0)">
+            <span class="material-symbols-outlined">link</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="inner shadow allborder content secondp">
+      <div class="project-img">
+        <div class="swiper allborder">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="Resources/img/bgsample.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/city1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/city2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="Resources/img/city3.jpg" alt="">
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <a href="Javascript:void(0)" class="projectmodalbtn">
+            <span class="material-symbols-outlined lighttext secondp">open_in_full</span>
+          </a>
+        </div>
+      </div>
+      <div class="project-present">
+        <h3>프로젝트 제목2</h3>
+        <h4>프로젝트 주제(소제목)</h4>
+        <ul>
+          <li>기능 1</li>
+          <li>기능 2</li>
+          <li>기능 3</li>
+          <li>기능 4</li>
+        </ul>
+        <div class="project-skill">
+          <img src="/Resources/icon/skills/Visual-Studio-Code-(VS-Code).png" alt="">
+          <img src="/Resources/icon/skills/HTML5.png" alt="">
+          <img src="/Resources/icon/skills/CSS3.png" alt="">
+          <img src="/Resources/icon/skills/JavaScript.png" alt="">
+          <img src="/Resources/icon/skills/GitHub.png" alt="">
+        </div>
+        <div class="project-link">
+          <a href="Javascript:void(0)">
+            <img src="Resources/icon/skills/GitHub.png" alt="">
+          </a>
+          <a href="Javascript:void(0)">
+            <span class="material-symbols-outlined">link</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
+  <section class="contact scroll-spy" id="contact">
+    <h2 class="title">CONTACT</h2>
+    <div class="contact_info font18 weight600">
+      <ul>
+        <li>
+          <a href="Javascript:void(0)">github.com/geoblo</a>
+        </li>
+        <li>010-1234-5678</li>
+        <li>geoblo@naver.com</li>
+      </ul>
+    </div>
+    <div class="contact_sns">
+      <ul>
+        <li>
+          <a href="Javascript:void(0)">
+            <img src="Resources/icon/others/instar.png" alt="인스타그램">
+          </a>
+        </li>
+        <li>
+          <a href="Javascript:void(0)">
+            <img src="Resources/icon/others/youtube.png" alt="유튜브">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>  
 
+  <footer class="footer">
+    <div class="inner">
+      <p class="copyright font20 weight600">
+        &copy; <span class="this-year"></span>
+        Yun Jae Hoon. All Rights Reserved.
+      </p>
+    </div>
   </footer>
+
+  <div class="topbtn">
+    <a href="#">
+      <span class="material-symbols-outlined">arrow_circle_up</span>
+    </a>
+  </div>
+
+  <div class="projectmodal">
+    <div class="pmcontent">
+      <div class="pmheader topborder">
+        <span class="pmtitle"></span>
+        <a href="Javascript:void(0)" class="closemodalbtn">
+          <span class="material-symbols-outlined">close</span>
+        </a>
+      </div>
+      <div class="pmbody bottomborder">
+        <!-- 슬라이더 추가 -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="" alt="">
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
