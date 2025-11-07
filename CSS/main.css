@@ -299,11 +299,6 @@ header .inner .hambuger span {
   padding: 20px 10px;
 }
 
-.about .inner .about-me-text{
-  width: 40%;
-  padding: 20px;
-}
-
 .about .inner .about-me-img {
   width: 30%;
   display: flex;
@@ -326,6 +321,8 @@ header .inner .hambuger span {
 
 
 .about .inner .about-me-text{
+  width: 40%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -385,6 +382,8 @@ header .inner .hambuger span {
 .projects .inner {
   display: flex;
   margin: 30px auto;
+
+  min-height: 400px;
 }
 
 .projects .inner .project-img,
@@ -446,17 +445,13 @@ header .inner .hambuger span {
   justify-content: space-around;
 }
 
-.projects .inner .project-present .project-link a {
-  width: 40%;
-}
-
 .projects .inner .project-present .project-link a:hover {
   animation-name: rotate360;
   animation-duration: 1s;
 }
 
 .projects .inner .project-present .project-link img {
-  width: 100%;
+  width: 32px;
   object-fit: contain;
 }
 
@@ -773,6 +768,28 @@ header .inner .hambuger span {
     padding: 0;
     justify-content: space-around;
   }
+
+  .projects .inner{
+    min-height: 300px;
+  }
+
+  .projects .inner .project-present .project-skill img{
+    max-width: 25px;
+    margin: 0 3px;
+  }
+
+  .projects .inner .project-present .project-link {
+    width: 30%;
+  }
+
+  .projects .inner .project-present .project-link img {
+    width: 20px;
+  }
+
+  .projects .inner .project-present .project-link span {
+    font-size: 25px;
+  }
+  
 }
 
 @media screen and (max-width: 431px) {
@@ -786,11 +803,24 @@ header .inner .hambuger span {
 
   .about .inner {
     align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
   }
 
   .about .inner .about-me-img {
-    height: 80%;
+    width: 50%;
   }
+
+  .about .inner .about-me-text{
+    width: 60%;
+    gap: 30px;
+  }
+
+  .projects .inner .project-img,
+  .projects .inner .project-present{
+    padding: 10px;
+  }
+
 }
 
 /* Animation */
