@@ -254,6 +254,11 @@ header .inner .hambuger span {
   justify-content: space-between;
 }
 
+.viewsection .inner .swiper-button-next,
+.viewsection .inner .swiper-button-prev{
+  color: var(--strong-text-c);
+}
+
 .viewsection .inner .presentme {
   width: 40%;
   display: flex;
@@ -729,11 +734,6 @@ header .inner .hambuger span {
 
   .viewsection .inner{
     flex-direction: column;
-  }
-
-  .viewsection .inner .swiper-button-next,
-  .viewsection .inner .swiper-button-prev{
-    color: var(--strong-text-c);
   }
 
   .viewsection .inner .presentme {

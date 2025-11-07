@@ -39,7 +39,7 @@ export function closeModal(){
 }
 
 export function isActiveModal(){
-  if(dom.projectModal.style.display = 'flex'){
+  if(dom.projectModal.style.display === 'flex'){
     return true;
   }
   return false;

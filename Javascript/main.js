@@ -10,9 +10,9 @@ import * as SCROLL from './ui/scrollmagic.js';
 import * as MOBILE from './ui/mobileAction.js';
 
 // 슬라이더 활성화
-SWIPER.createNoneNavSwiper('.presentwork')
-SWIPER.createNavSwiper('.projects');
-SWIPER.createNavSwiper('.projectmodal');
+SWIPER.createSwiper('.presentwork',{pagination : false})
+SWIPER.createSwiper('.projects');
+SWIPER.createSwiper('.projectmodal');
 
 
 // AddEventListener
