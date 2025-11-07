@@ -4,7 +4,8 @@
 import {dom} from './ui/dom.js';
 import * as MODAL from './ui/modalcontrol.js';
 import * as SWIPER from './ui/swipercontrol.js';
-
+import * as SCROLL from './ui/scrollmagic.js';
+import * as MOBILE from './ui/mobileAction.js';
 
 // 슬라이더 활성화
 SWIPER.createNoneNavSwiper('.presentwork')
@@ -25,66 +26,42 @@ dom.projectModalBtn.forEach(x => {
 // 모달 닫기
 dom.closemodalbtn.addEventListener('click', MODAL.closeModal);
 
+// 반응형 Menu 버튼 클릭 이벤트
+dom.hambugerbtn.addEventListener('click', MOBILE.openMobileMenu);
+
+// 반응형 Nav a 클릭 이벤트
+dom.mobileNavEls.forEach(x => {
+  x.addEventListener('click', MOBILE.mobileMenuControl)
+});
 
 // 키다운 분기
 function whatKeyDown(e){
-  if(e.key === 'Escape'){
-    if(MODAL.isActiveModal){
+
+  console.log(e.key);
+  
+  if(MODAL.isActiveModal){
+    if(e.key === 'Escape'){
       e.preventDefault();
       MODAL.closeModal();
+      return;
+    }
+    if(e.key === 'ArrowLeft'){
+      MODAL.prevImg();
+    }
+    if(e.key === 'ArrowRight'){
+      MODAL.nextImg();
     }
   }
-}
-
-
-// ScrollMagic 사용법
-// init controller
-const controller = new ScrollMagic.Controller();
-
-const spyEls = document.querySelectorAll('section.scroll-spy');
-
-spyEls.forEach(function(x){
-  // console.log(x, index);
   
-  // create a scene
-  new ScrollMagic.Scene({
-    triggerElement : x, // 감시할 장면 추가 및 옵션 지정
-    triggerHook : 0.7   // 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
-  })
-    .setClassToggle(x, 'show')  // 요소가 화면에 보이면 show 클래스 추가
-    .addTo(controller); // 컨트롤러에 장면 할당(필수!!)
+}
+
+// ScrollEvent 추가
+
+// 자기 자신의 ScrollEvent
+dom.scrollEls.forEach(function(x){
+  SCROLL.addScrollMagic(x,0.7);
 });
 
-const topBtnActiveArea = document.querySelector('#about');
-const topBtnContainArea = document.querySelector('.topbtn');
+// about위치에 따른 TopBtn 노출
+SCROLL.addScrollMagic(dom.about,0,dom.topBtn);
 
-checkTopBtnScroll(topBtnActiveArea, topBtnContainArea)
-
-function checkTopBtnScroll(sectorArea, showArea) {
-
-  // create a scene
-  new ScrollMagic.Scene({
-    triggerElement : sectorArea, // 감시할 장면 추가 및 옵션 지정
-    triggerHook : 0   // 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
-  })
-    .setClassToggle(showArea, 'show')  // 요소가 화면에 보이면 show 클래스 추가
-    .addTo(controller); // 컨트롤러에 장면 할당(필수!!)
-}
-
-const menuBtn = document.querySelector('.hambugerbtn');
-const mobileNav = document.querySelector('.header .nav');
-const navCategories = mobileNav.querySelectorAll('a');
-
-navCategories.forEach(x => {
-  x.addEventListener('click', mobileMenuControl)
-});
-menuBtn.addEventListener('click', openMenu);
-
-function openMenu(){
-  mobileNav.classList.toggle('show');
-}
-
-function mobileMenuControl(){
-  if(mobileNav.classList.contains('show'))
-    mobileNav.classList.remove('show');
-}

@@ -17,7 +17,6 @@ export function createNavSwiper(area){
       prevEl: `${area} .swiper-button-prev`,
     },
   });
-  return navSwiper;
 }
 
 export function createNoneNavSwiper(area){
@@ -38,6 +37,4 @@ export function createNoneNavSwiper(area){
       prevEl: `${area} .swiper-button-prev`,
     },
   });
-
-  return noneSwiper;
 }

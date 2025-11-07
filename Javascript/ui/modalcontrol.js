@@ -44,3 +44,11 @@ export function isActiveModal(){
   }
   return false;
 }
+
+export function prevImg(){
+  dom.modalPrevBtn.click();
+}
+
+export function nextImg(){
+  dom.modalNextBtn.click();
+}
