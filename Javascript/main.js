@@ -45,10 +45,12 @@ function whatKeyDown(e){
       return;
     }
     if(e.key === 'ArrowLeft'){
+      e.preventDefault();
       MODAL.prevImg();
       return;
     }
     if(e.key === 'ArrowRight'){
+      e.preventDefault();
       MODAL.nextImg();
       return;
     }

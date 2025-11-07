@@ -31,24 +31,28 @@ export function openModal(e){
   dom.pmTitle.textContent = project.querySelector('.project-present > h3').textContent;
   
   // 모달 띄우기
-  dom.projectModal.style.display = 'flex';
+  dom.projectModal.classList.add('show');
 }
 
 export function closeModal(){
-  dom.projectModal.style.display ='none';
+  dom.projectModal.classList.remove('show');
 }
 
 export function isActiveModal(){
-  if(dom.projectModal.style.display === 'flex'){
+  if(dom.projectModal.classList.contain('show')){
     return true;
   }
   return false;
 }
 
-export function prevImg(){
+export function prevImg(e){
+  // 버블링 방지
+  // e.stopPropagation()
   dom.modalPrevBtn.click();
 }
 
-export function nextImg(){
+export function nextImg(e){
+  // 버블링 방지
+  // e.stopPropagation()
   dom.modalNextBtn.click();
 }

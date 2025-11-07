@@ -603,6 +603,10 @@ header .inner .hambuger span {
   background-color: #0E2233AA;
 }
 
+.projectmodal.show {
+  display: flex;
+}
+
 .projectmodal .pmcontent {
   width: 50%;
   height: 50%;
