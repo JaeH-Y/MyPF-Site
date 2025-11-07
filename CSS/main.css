@@ -144,6 +144,10 @@ header .inner {
   border: 0px;
 }
 
+header .inner .mobileheadertext{
+  display: none;
+}
+
 header .inner .nav {
   display: flex;
   gap: 0 40px;
@@ -654,6 +658,10 @@ header .inner .hambuger span {
 
   .viewsection .inner .presentwork .swiper {
     height: 80%;
+  }
+
+  header .inner .mobileheadertext{
+    display: block;
   }
 
   header .inner .nav {
