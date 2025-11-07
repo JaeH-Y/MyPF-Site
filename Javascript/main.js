@@ -1,7 +1,9 @@
 
 
 // JS 연동
+// document
 import {dom} from './ui/dom.js';
+// 로직
 import * as MODAL from './ui/modalcontrol.js';
 import * as SWIPER from './ui/swipercontrol.js';
 import * as SCROLL from './ui/scrollmagic.js';
@@ -36,9 +38,6 @@ dom.mobileNavEls.forEach(x => {
 
 // 키다운 분기
 function whatKeyDown(e){
-
-  console.log(e.key);
-  
   if(MODAL.isActiveModal){
     if(e.key === 'Escape'){
       e.preventDefault();
@@ -47,12 +46,13 @@ function whatKeyDown(e){
     }
     if(e.key === 'ArrowLeft'){
       MODAL.prevImg();
+      return;
     }
     if(e.key === 'ArrowRight'){
       MODAL.nextImg();
+      return;
     }
   }
-  
 }
 
 // ScrollEvent 추가
